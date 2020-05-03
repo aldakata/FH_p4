@@ -5,9 +5,9 @@ body {
 }
 /*--- navigation bar ---*/
 .navbar {
-  background:#6ab446;
+  background:#A1E8A1;
 }
-.nav-link,
+
 .navbar-brand {
   color: #fff;
   cursor: pointer;
