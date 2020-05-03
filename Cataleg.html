@@ -55,9 +55,27 @@
     </div>
 
     <template id="plat_preview">
-      <div class="col-lg-4 col-md-4 col-sm-12">
-        <img src="assets\plats\canelons.png" alt = "Plat" class="img-fluid">
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <img src="assets\plats\canelons.png"  alt = "Plat" class="img-fluid">
         <h3 class="feature-title">Lorem ipsum</h3>
+      </div>
+    </template>
+
+    <template id="plat_preview2">
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <div class="card" style="width: 18rem;">
+          <div class="hovereffect">
+            <img class="img-responsive card-img-top" src="assets\plats\canelons.png" alt="Plat">
+            <div class="overlay">
+               <h2>Hover effect 3</h2>
+               <a class="info" href="#">Add to the basket</a>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <h3 class="feature-title">Lorem ipsum</h3>
+          </div>
+        </div>
       </div>
     </template>
 
@@ -66,11 +84,9 @@
       var myTitle = ["canelons de lavia", "tagliatelle per lleparse els dits", "Pizza mia mamma", "egg toast"]
       var imgFolder = 'assets/plats/';
     function showContent() {
-      var temp, item, img, title, a, i, row;
-      temp = document.getElementById("plat_preview");
+      var temp, item, img, title, title_hover, a, i, row;
+      temp = document.getElementById("plat_preview2");
       item = temp.content.querySelector("div");
-      img = temp.content.querySelector("img");
-      title = temp.content.querySelector("h3");
       for (i = 0; i<myArr.length; i++){
         a = document.importNode(temp.content, true);
         img = a.querySelector("img");
@@ -79,6 +95,9 @@
 
         title = a.querySelector("h3");
         title.textContent = myTitle[i];
+
+        title_hover = a.querySelector("h2")
+        title_hover.textContent = myTitle[i]
 
         row = document.createElement('div');
         row.classList.add("row");
