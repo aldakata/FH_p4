@@ -31,6 +31,30 @@ h1{
 p{
   font-family: Helvetica, Arial, sans-serif;
 }
+a{
+  text-align: center;
+}
+a.nav-link:link
+{
+   color: #585858;
+   text-decoration: none;
+}
+a.nav-link:visited
+{
+   color: #585858;
+   text-decoration: none;
+}
+a.nav-link:hover
+{
+   color: #585858;
+   text-decoration: none;
+}
+a.nav-link:active
+{
+   color: #585858;
+   text-decoration: none;
+}
+
 
 /*Basket*/
 .card-basket{
