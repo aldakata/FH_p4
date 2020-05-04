@@ -1,0 +1,46 @@
+/*--- Caroussel ---*/
+.imgCarousel {
+  width: auto;
+  height: 350px;
+  max-height: 350px;
+  margin-top: auto;
+}
+/*-- Fixed buy bar ---*/
+.opct {
+  background-color: #FFFFFF;
+  display: flex;
+  margin: auto;
+  opacity: 1;
+  border-top: solid lightgrey 1px;
+  height: 50px;
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+  margin-top: -50%;
+}
+
+.trns {
+  opacity: 1;
+  height: 48px;
+  width: 100%;
+  bottom: 0;
+}
+/*--- Back to catalog ---*/
+.catalogBack{
+  background-color: lightgrey;
+  vertical-align: middle;
+}
+
+/*--- A tag ---*/
+a{
+  color: #000000;
+  font-weight: 600;
+}
+
+.right {
+  right: 0px;
+}
+
+.left {
+  left: 0px;
+}

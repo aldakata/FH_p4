@@ -20,7 +20,7 @@
       <div class="pt-3 pb-3 border-bottom container">
         <div class="row">
           <div class="col-6">
-            <h3 style="margin-bottom:0px;">Your Basket (0)</h3>
+            <h3 style="margin-bottom:0px;">Your Basket (1)</h3>
           </div>
           <div class="col-6">
             <button type="button" class="btn btn-default float-right" data-toggle="collapse" data-target="#basketCollapse">Close X</button>
@@ -156,16 +156,14 @@
           Healthy meals for a full breakfast, luch or dinner. You won't feel hungry!
         </p>
       </div>
-
       <div class="container d-flex flex-wrap pt-5 pb-3" id='plat_container'>
       </div>
-
     </div>
 
     <template id="plat_preview3">
-      <div class="container mt-3 ml-3 mr-3 mb-3">
-        <div class="card" style="width:220px; height:335px">
-          <img id="card_img" class="img-fluid card-img-top" style="width:220px;height:220px;object-fit:cover;" src="assets\plats\canelons.png" alt="Plat">
+      <div class="container mt-1 ml-1 mr-1 mb-1">
+        <div class="card" style="width:180px; height:300px">
+          <a href="Plat.html"><img id="card_img" class="img-fluid card-img-top" style="width:180px;height:200px;object-fit:cover;" src="assets\plats\canelons.png" alt="Plat"></a>
 
           <div class="card-body border-bottom pt-2 pb-2">
                 <h5 class="feature-title mb-0 mt-0" id="card_title">Lorem ipsum</h5>
@@ -177,11 +175,23 @@
                   <span id="card_price" class="float-left">0.0$</span>
                 </div>
                 <div class="col-6">
-                  <button type="button" class="btn btn-primary float-right">Add</button>
+                  <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle btn-sm" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      BUY
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">Monday</a>
+                      <a class="dropdown-item" href="#">Tuesday</a>
+                      <a class="dropdown-item" href="#">Wednesday</a>
+                      <a class="dropdown-item" href="#">Thursday</a>
+                      <a class="dropdown-item" href="#">Friday</a>
+                      <a class="dropdown-item" href="#">Saturday</a>
+                      <a class="dropdown-item" href="#">Sunday</a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </div>
@@ -189,8 +199,8 @@
 
     <script>
       var myArr = ["canelons.png", "tagliattelle.png", "pizza.png", "toast.png"];
-      var myTitle = ["canelons", "tagliatelle", "Pizza mia mamma", "egg toast"];
-      var prices = ["5.5", "6.45", "6.75", "5.95"];
+      var myTitle = ["Canelonni", "Tagliatelle", "Pizza mia mamma", "Egg toast"];
+      var prices = ["5.5€", "6.45€", "6.75€", "5.95€"];
       var imgFolder = 'assets/plats/';
     function showContent() {
       var item = document.getElementById("plat_preview3").content.querySelector("div");
