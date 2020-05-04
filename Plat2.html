@@ -8,7 +8,6 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="main.css">
     <link rel="stylesheet" href="plat.css">
-    <link rel="stylesheet" href="TemplateTesting/footer.css">
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="utils/jquery-latest.js"></script>
     <script src="utils/popper.min.js"></script>
@@ -40,17 +39,17 @@
              <td>
                <div class="container">
                  <div class="row">
-                   <div class="card" style="width:150px; height:190px">
-                     <img id="card_img" class="img-fluid card-img-top" style="width:150px;height:150px;object-fit:cover;" src="assets\plats\tagliattelle.png" alt="Plat">
+                   <div class="card card-basket">
+                     <img id="card_img" class="img-fluid card-img-top card-basket-image" src="assets\plats\canelons.png" alt="Plat">
 
                      <div class="card-body border-bottom pt-2 pb-2 pl-1 pr-1">
                        <div class="container">
                          <div class="row">
                            <div class="col-6 d-flex align-items-center">
-                              <h5 class="feature-title mb-0 mt-0" id="card_title" style="font-size:14px">Tagliatelle</h5>
+                              <h5 class="feature-title mb-0 mt-0 card-title-font serif" id="card_title" >Tagliatelle</h5>
                            </div>
                            <div class="col-6">
-                             <a href="Plat1.html" class="btn btn-danger float-right pt-0 pb-0 pl-0 pr-0" style="width:20px;height:20px;font-size:10px">&#x2015;</a>
+                             <a href="Cataleg1.html" class="btn btn-danger float-right pt-0 pb-0 pl-0 pr-0 card-basket-button">&#x2015;</a>
                            </div>
                          </div>
                        </div>
@@ -159,7 +158,7 @@
           </nav>
         </div>
         <div class="col pr-4 pt-2 pb-3">
-          <button type="button" class="btn btn-nav float-right" data-toggle="collapse" data-target="#basketCollapse">Basket (1)</button>
+          <button type="button" class="btn float-right btn-nav" data-toggle="collapse" data-target="#basketCollapse">Basket (1)</button>
         </div>
       </div>
     </div>
@@ -184,7 +183,7 @@
         </span>
       </section>
       <section>
-        <p>Empleamos la grasa del pato para el sofrito, al que agregamos ajos asados, setas y vino blanco. Agregamos hierbas, el confit desmigado y mojamos con caldo de ave. Para terminar añadimos pimientos del piquillo y crema de emmental y gorgonzola.<p>
+        <p class="plat_exp">Empleamos la grasa del pato para el sofrito, al que agregamos ajos asados, setas y vino blanco. Agregamos hierbas, el confit desmigado y mojamos con caldo de ave. Para terminar añadimos pimientos del piquillo y crema de emmental y gorgonzola.<p>
       </section>
       <section>
         <div id="accordion">
@@ -295,18 +294,18 @@
 
       <div class="opct my-auto">
         <p class="left" align="left">6.45€</p>
-        <div class="dropdown right">
-          <button class="btn btn-nav brand-color dropdown-toggle btn-sm float-right disabled" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <div class="dropup right">
+          <button class="btn dropdown-toggle btn-sm float-right btn-nav brand-color disabled" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             BUY
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Monday</a>
-            <a class="dropdown-item" href="#">Tuesday</a>
-            <a class="dropdown-item" href="#">Wednesday</a>
-            <a class="dropdown-item" href="#">Thursday</a>
-            <a class="dropdown-item" href="#">Friday</a>
-            <a class="dropdown-item" href="#">Saturday</a>
-            <a class="dropdown-item" href="#">Sunday</a>
+            <a class="dropdown-item" href="Cataleg2.html">Monday</a>
+            <a class="dropdown-item disabled" href="#">Tuesday</a>
+            <a class="dropdown-item disabled" href="#">Wednesday</a>
+            <a class="dropdown-item disabled" href="#">Thursday</a>
+            <a class="dropdown-item disabled" href="#">Friday</a>
+            <a class="dropdown-item disabled" href="#">Saturday</a>
+            <a class="dropdown-item disabled" href="#">Sunday</a>
           </div>
         </div>
       </div>
@@ -314,7 +313,7 @@
       </div>
 
     </div>
-    <!-- Footer -->
+
     <section id="footer">
       <div class="container">
         <div class="row text-center text-xs-center text-sm-left text-md-left">
@@ -348,7 +347,6 @@
         </div>
       </div>
     </section>
-    <!-- ./Footer -->
 
   </body>
 </html>
