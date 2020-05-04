@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="utils/css/bootstrap.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="cataleg.css">
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="utils/jquery-latest.js"></script>
     <script src="utils/popper.min.js"></script>
@@ -18,13 +18,13 @@
   <body onload="showContent()">
     <nav class="navbar navbar-expand-lg navbar-light">
 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="border: 1px solid">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <a class="navbar-brand" href="#">Edu Eats</a>
+      <a class="navbar-brand" href="#" style="margin:auto">EduEats</a>
 
-      <button type="button" class="btn btn-default">Basket</button>
+      <button type="button" class="btn btn-default" style="border: 1px solid">Basket</button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
@@ -40,71 +40,177 @@
         </ul>
       </div>
     </nav>
-    <div class="top">
-      <div class="dropdown">
-        <button class="btn btn-link btn-sm dropdown-toggle" type="button" data-toggle="dropdown">Filter by:<span class="caret"></span></button>
-        <ul class="dropdown-menu">
-          <li><a href="#">HTML</a></li>
-          <li><a href="#">CSS</a></li>
-          <li><a href="#">JavaScript</a></li>
-        </ul>
+    <h2 style="text-align:center">Cataleg de plats</h1>
+
+    <p style="text-align:center">Aqui trobareu una seleccio de plats cuinats per les nostres estrelles michelline.</p>
+    <a class="btn btn-sm btn-block" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" style="border: none; color: #B8B8B8">
+    Filtres
+    </a>
+
+    <div class="collapse container" id="collapseExample" style="background: #F5F5F5		">
+      <div class="h5 row">
+        Dietes
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Dieta</label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck2">
+            <label class="form-check-label" for="exampleCheck2">Dieta</label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Dieta</label>
+          </div>
         </div>
       </div>
 
-    <div class="container-fluid" id='plat_container'>
+      <div class="row">
+        <div class="col">
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Dieta</label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Dieta</label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Dieta</label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Dieta</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="h5 row">
+        Allergens
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Dieta</label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Dieta</label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Dieta</label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Dieta</label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Dieta</label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Dieta</label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Dieta</label>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <template id="plat_preview">
-      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-        <img src="assets\plats\canelons.png"  alt = "Plat" class="img-fluid">
-        <h3 class="feature-title">Lorem ipsum</h3>
-      </div>
-    </template>
-
-    <template id="plat_preview2">
-      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-        <div class="card" style="width: 18rem;">
-          <div class="hovereffect">
-            <img class="img-responsive card-img-top" src="assets\plats\canelons.png" alt="Plat">
-            <div class="overlay">
-               <h2>Hover effect 3</h2>
-               <a class="info" href="#">Add to the basket</a>
-            </div>
-          </div>
-
+    <!--plats-->
+    <div class="container-fluid" id='plat_container'>
+      <div class="row">
+        <div class="col card">
+          <img class="card-img-top" src="assets\plats\canelons.png" alt="Card image cap">
           <div class="card-body">
-            <h3 class="feature-title">Lorem ipsum</h3>
+            <h5 style="margin: 0;padding: 0; text-align: center;">Card title</h5>
+            <a class="btn btn-primary btn-sm btn-block" aria-expanded="true" style="border: solid; color: #B8B8B8; padding: 0">Informacio</a>
+            <a class="btn btn-primary btn-sm btn-block" aria-expanded="true" style="border: solid; color: #B8B8B8; padding: 0">Comprar</a>
           </div>
         </div>
+        <div class="col card">
+          <img src="assets\plats\canelons.png"  alt = "Plat" class="img-fluid">
+          <h3 class="feature-title">Lorem ipsum</h3>
+        </div>
       </div>
-    </template>
+      <div class="row">
+        <div class="col card">
+          <img src="assets\plats\canelons.png"  alt = "Plat" class="img-fluid">
+          <h3 class="feature-title">Lorem ipsum</h3>
+        </div>
+        <div class="col">
+          <img src="assets\plats\canelons.png"  alt = "Plat" class="img-fluid">
+          <h3 class="feature-title">Lorem ipsum</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <img src="assets\plats\canelons.png"  alt = "Plat" class="img-fluid">
+          <h3 class="feature-title">Lorem ipsum</h3>
+        </div>
+        <div class="col">
+          <img src="assets\plats\canelons.png"  alt = "Plat" class="img-fluid">
+          <h3 class="feature-title">Lorem ipsum</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <img src="assets\plats\canelons.png"  alt = "Plat" class="img-fluid">
+          <h3 class="feature-title">Lorem ipsum</h3>
+        </div>
+        <div class="col">
+          <img src="assets\plats\canelons.png"  alt = "Plat" class="img-fluid">
+          <h3 class="feature-title">Lorem ipsum</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <img src="assets\plats\canelons.png"  alt = "Plat" class="img-fluid">
+          <h3 class="feature-title">Lorem ipsum</h3>
+        </div>
+        <div class="col">
+          <img src="assets\plats\canelons.png"  alt = "Plat" class="img-fluid">
+          <h3 class="feature-title">Lorem ipsum</h3>
+        </div>
+      </div>
+    </div>
 
-    <script>
-      var myArr = ["canelons.png", "tagliattelle.png", "pizza.png", "toast.png"];
-      var myTitle = ["canelons de lavia", "tagliatelle per lleparse els dits", "Pizza mia mamma", "egg toast"]
-      var imgFolder = 'assets/plats/';
-    function showContent() {
-      var temp, item, img, title, title_hover, a, i, row;
-      temp = document.getElementById("plat_preview2");
-      item = temp.content.querySelector("div");
-      for (i = 0; i<myArr.length; i++){
-        a = document.importNode(temp.content, true);
-        img = a.querySelector("img");
-        img.src=imgFolder.concat(myArr[i]);
-        img.alt=myTitle[i];
-
-        title = a.querySelector("h3");
-        title.textContent = myTitle[i];
-
-        title_hover = a.querySelector("h2")
-        title_hover.textContent = myTitle[i]
-
-        row = document.createElement('div');
-        row.classList.add("row");
-        row.appendChild(a);
-        document.getElementById("plat_container").appendChild(row);
-      }
-    }
-    </script>
   </body>
 </html>
