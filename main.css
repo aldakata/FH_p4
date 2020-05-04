@@ -1,0 +1,77 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: #f2f69;
+}
+
+/*color*/
+.brand-color {
+  background:#A1E8A1;
+}
+
+/*Buttons*/
+.btn-nav{
+  border-color: #989898;
+  border-width: medium;
+}
+/*Typografie*/
+.serif{
+  font-family: "Times New Roman", Times, serif;
+}
+.sansserif{
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/*Basket*/
+.card-basket{
+  width:150px;
+  height:190px;
+}
+
+.card-basket-image{
+  width:150px;
+  height:150px;
+  object-fit:cover;
+}
+.card-title-font{
+  font-size:14px;
+}
+.card-basket-button{
+  width:20px;
+  height:20px;
+  font-size:10px;
+}
+
+/*Catalog*/
+.card-catalog{
+  width:180px;
+  height:300px
+}
+
+.card-catalog-image{
+  width:180px;
+  height:200px;
+  object-fit:cover;
+}
+
+/*Containers*/
+.carousel-caption {
+  font-size: 19px;
+  max-width: 550px;
+  padding: 0 20px;
+  margin: 0 auto;
+  margin-top: 0;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-40%);
+}
+
+.container-fluid {
+  padding:0;
+  margin:0;
+}
+
+.container-botons{
+  padding-left:0px;
+  padding-right:0px;
+}
