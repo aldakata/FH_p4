@@ -8,14 +8,18 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="utils/css/bootstrap.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" type="text/css" href="cataleg.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="utils/jquery-latest.js"></script>
     <script src="utils/popper.min.js"></script>
     <script src="utils/js/bootstrap.min.js"></script>
 
+    <title>Edu Eats</title>
+
   </head>
-  <body onload="showContent()">
+
+  <body>
     <div class="container fixed-top collapse" id="basketCollapse" style="background-color: rgba(255,255,255,1)">
       <div class="pt-3 pb-3 border-bottom container">
         <div class="row">
@@ -118,7 +122,8 @@
       </div>
     </div>
 
-    <div class="container mt-3 mb-3" style="padding-left:0px;padding-right:0px">
+
+    <div class="container" style="padding-left:0px;padding-right:0px">
       <div class="row no-gutters">
         <div class="col-8">
           <nav class="navbar navbar-expand-md navbar-light">
@@ -141,78 +146,10 @@
             </div>
           </nav>
         </div>
-        <div class="col pr-4 pt-2 pb-3">
+        <div class="col pr-4 pt-3 pb-3" style="padding-top:8px">
           <button type="button" class="btn btn-light float-right" data-toggle="collapse" data-target="#basketCollapse">Basket (0)</button>
         </div>
       </div>
     </div>
-
-    <div class="container pl-0 pr-0">
-      <div class="pt-3 pb-3 border-bottom container text-center">
-        <h3>
-          COMPLETE MEALS
-        </h3>
-        <p>
-          Healthy meals for a full breakfast, luch or dinner. You won't feel hungry!
-        </p>
-      </div>
-
-      <div class="container d-flex flex-wrap pt-5 pb-3" id='plat_container'>
-      </div>
-
-    </div>
-
-    <template id="plat_preview3">
-      <div class="container mt-3 ml-3 mr-3 mb-3">
-        <div class="card" style="width:220px; height:335px">
-          <img id="card_img" class="img-fluid card-img-top" style="width:220px;height:220px;object-fit:cover;" src="assets\plats\canelons.png" alt="Plat">
-
-          <div class="card-body border-bottom pt-2 pb-2">
-                <h5 class="feature-title mb-0 mt-0" id="card_title">Lorem ipsum</h5>
-          </div>
-          <div class="card-body pt-2 pb-2">
-            <div class="container">
-              <div class="row">
-                <div class="col-6 d-flex align-items-center">
-                  <span id="card_price" class="float-left">0.0$</span>
-                </div>
-                <div class="col-6">
-                  <button type="button" class="btn btn-primary float-right">Add</button>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </template>
-
-    <script>
-      var myArr = ["canelons.png", "tagliattelle.png", "pizza.png", "toast.png"];
-      var myTitle = ["canelons", "tagliatelle", "Pizza mia mamma", "egg toast"];
-      var prices = ["5.5", "6.45", "6.75", "5.95"];
-      var imgFolder = 'assets/plats/';
-    function showContent() {
-      var item = document.getElementById("plat_preview3").content.querySelector("div");
-      for (i = 0; i<myArr.length; i++){
-        var newCard = document.importNode(item, true);
-        var img = newCard.querySelector("#card_img");
-        img.src=imgFolder.concat(myArr[i]);
-        img.alt=myTitle[i];
-
-        var title = newCard.querySelector("#card_title");
-        title.textContent = myTitle[i];
-
-        var price = newCard.querySelector("#card_price");
-        price.textContent = prices[i];
-
-        var row = document.createElement("div");
-        row.className="row";
-        row.appendChild(newCard)
-
-        document.getElementById("plat_container").appendChild(row);
-      }
-    }
-    </script>
   </body>
 </html>

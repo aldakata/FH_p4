@@ -5,9 +5,9 @@ body {
 }
 /*--- navigation bar ---*/
 .navbar {
-  background:#6ab446;
+  background:#A1E8A1;
 }
-.nav-link,
+
 .navbar-brand {
   color: #fff;
   cursor: pointer;
@@ -133,4 +133,20 @@ body {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
+}
+
+.carousel-caption {
+  font-size: 19px;
+  max-width: 550px;
+  padding: 0 20px;
+  margin: 0 auto;
+  margin-top: 0;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-40%);
+}
+
+.container-fluid {
+  padding:0;
+  margin:0;
 }
