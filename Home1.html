@@ -20,6 +20,108 @@
   </head>
 
   <body>
+    <div class="container collapse" id="basketCollapse" style="background-color: rgba(255,255,255,1)">
+      <div class="pt-3 pb-3 border-bottom container">
+        <div class="row">
+          <div class="col-6">
+            <h3 style="margin-bottom:0px;">Your Basket (0)</h3>
+          </div>
+          <div class="col-6">
+            <button type="button" class="btn btn-default float-right" data-toggle="collapse" data-target="#basketCollapse">Close X</button>
+          </div>
+        </div>
+      </div>
+      <div class="pt-3 pb-3 d-flex container justify-content-center border-bottom">
+        <table class="table table-bordered w-auto mt-2">
+          <thead>
+            <tr>
+              <th scope="col">Week Day</th>
+              <th scope="col">Plates</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+             <th scope="row">Monday</th>
+             <td>
+               <ul class="list-group">
+                 <li class="list-group-item disabled">Empty</li>
+               </ul>
+             </td>
+            </tr>
+
+            <tr>
+              <th scope="row">Tuesday</th>
+              <td>
+                <ul class="list-group">
+                  <li class="list-group-item disabled">Empty</li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">Wednesday</th>
+              <td>
+                <ul class="list-group">
+                  <li class="list-group-item disabled">Empty</li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">Thursday</th>
+              <td>
+                <ul class="list-group">
+                  <li class="list-group-item disabled">Empty</li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">Friday</th>
+              <td>
+                <ul class="list-group">
+                  <li class="list-group-item disabled">Empty</li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">Saturday</th>
+              <td>
+                <ul class="list-group">
+                  <li class="list-group-item disabled">Empty</li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">Sunday</th>
+              <td>
+                <ul class="list-group">
+                  <li class="list-group-item disabled">Empty</li>
+                </ul>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+      <div class="pt-3 pb-3 pl-5 pr-5 container border-bottom">
+        <div class="row">
+          <div class="col-6">
+            <span>SUBTOTAL</span>
+          </div>
+          <div class="col-6">
+            <span class="float-right">0.0 $</span>
+          </div>
+        </div>
+      </div>
+      <div class="pt-3 pb-3 pl-5 pr-5 container border-bottom d-flex justify-content-center">
+        <button type="button" class="btn btn-primary" disabled>Checkout</button>
+      </div>
+    </div>
+
     <div class="container mt-3 mb-3" style="padding-left:0px;padding-right:0px">
       <div class="row no-gutters">
         <div class="col-8">
@@ -27,29 +129,29 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand mx-auto" href="#">Edu Eats</a>
+            <a class="navbar-brand mx-auto" href="Home1.html">Edu Eats</a>
             <div class="collapse navbar-collapse mx-auto" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                  <a class="nav-link  mx-auto" href="#">Home</a>
+                  <a class="nav-link  mx-auto" href="Home1.html">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link  mx-auto" href="#">Our Meals</a>
+                  <a class="nav-link  mx-auto" href="Cataleg1.html">Our Meals</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link  mx-auto" href="#">Weekly Diets</a>
+                  <a class="nav-link  mx-auto disabled" href="#">Weekly Diets</a>
                 </li>
               </ul>
             </div>
           </nav>
         </div>
         <div class="col pr-4 pt-2 pb-3">
-          <button type="button" class="btn btn-light float-right" data-toggle="collapse" data-target="#basketCollapse">Basket (0)</button>
+          <a class="btn btn-light float-right" data-toggle="collapse" href="#basketCollapse">Basket (0)</a>
         </div>
       </div>
     </div>
 
-    <div class="container">
+    <div class="container-fluid">
       <!-- Carousel de presentacio -->
       <div id="carouselHome" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
