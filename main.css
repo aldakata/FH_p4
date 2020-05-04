@@ -8,6 +8,9 @@ body {
 .brand-color {
   background: PowderBlue;
   color: black;
+}
+
+.navbar-pad{
   padding-left:0px;
   padding-right:0px;
 }
