@@ -134,3 +134,19 @@ body {
   -ms-transform: scale(1);
   transform: scale(1);
 }
+
+.carousel-caption {
+  font-size: 19px;
+  max-width: 550px;
+  padding: 0 20px;
+  margin: 0 auto;
+  margin-top: 0;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-40%);
+}
+
+.container-fluid {
+  padding:0;
+  margin:0;
+}
