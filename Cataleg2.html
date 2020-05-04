@@ -16,42 +16,42 @@
 
   </head>
   <body onload="showContent()">
-    <div class="container collapse" id="basketCollapse" style="background-color: rgba(255,255,255,1)">
+    <div class="container collapse" id="basketCollapse">
       <div class="pt-3 pb-3 border-bottom container">
         <div class="row">
           <div class="col-6">
-            <h3 style="margin-bottom:0px;">Your Basket (1)</h3>
+            <h3 class="serif">Your Basket (1)</h3>
           </div>
           <div class="col-6">
-            <button type="button" class="btn btn-default float-right" data-toggle="collapse" data-target="#basketCollapse">Close X</button>
+            <button type="button" class="btn btn-default float-right sansserif" data-toggle="collapse" data-target="#basketCollapse">Close X</button>
           </div>
         </div>
       </div>
       <div class="pt-3 pb-3 d-flex container justify-content-center border-bottom">
         <table class="table table-bordered w-auto mt-2">
           <thead>
-            <tr>
+            <tr class="serif">
               <th scope="col">Week Day</th>
               <th scope="col">Plates</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody class="sansserif">
             <tr>
              <th scope="row">Monday</th>
              <td>
                <div class="container">
                  <div class="row">
-                   <div class="card" style="width:150px; height:190px">
-                     <img id="card_img" class="img-fluid card-img-top" style="width:150px;height:150px;object-fit:cover;" src="assets\plats\canelons.png" alt="Plat">
+                   <div class="card card-basket">
+                     <img id="card_img" class="img-fluid card-img-top card-basket-image" src="assets\plats\canelons.png" alt="Plat">
 
                      <div class="card-body border-bottom pt-2 pb-2 pl-1 pr-1">
                        <div class="container">
                          <div class="row">
                            <div class="col-6 d-flex align-items-center">
-                              <h5 class="feature-title mb-0 mt-0" id="card_title" style="font-size:14px">Canalons</h5>
+                              <h5 class="feature-title mb-0 mt-0 card-title-font serif" id="card_title" >Canalons</h5>
                            </div>
                            <div class="col-6">
-                             <button type="button" class="btn btn-danger float-right pt-0 pb-0 pl-0 pr-0" style="width:20px;height:20px;font-size:10px">&#x2015;</button>
+                             <button type="button" class="btn btn-danger float-right pt-0 pb-0 pl-0 pr-0 card-basket-button">&#x2015;</button>
                            </div>
                          </div>
                        </div>
@@ -121,7 +121,7 @@
         </table>
       </div>
 
-      <div class="pt-3 pb-3 pl-5 pr-5 container border-bottom">
+      <div class="pt-3 pb-3 pl-5 pr-5 container border-bottom sansserif">
         <div class="row">
           <div class="col-6">
             <span>SUBTOTAL</span>
@@ -131,19 +131,19 @@
           </div>
         </div>
       </div>
-      <div class="pt-3 pb-3 pl-5 pr-5 container border-bottom d-flex justify-content-center">
+      <div class="pt-3 pb-3 pl-5 pr-5 container border-bottom d-flex justify-content-center sansserif">
         <button type="button" class="btn btn-primary" disabled>Checkout</button>
       </div>
     </div>
 
-    <div class="container mt-3 mb-3" style="padding-left:0px;padding-right:0px">
+    <div class="container mt-3 mb-3 brand-color">
       <div class="row no-gutters">
         <div class="col-8">
           <nav class="navbar navbar-expand-md navbar-light">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler btn-nav" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand mx-auto" href="#">Edu Eats</a>
+            <a class="navbar-brand mx-auto serif" href="#">EduEats</a>
             <div class="collapse navbar-collapse mx-auto" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
@@ -160,17 +160,17 @@
           </nav>
         </div>
         <div class="col pr-4 pt-2 pb-3">
-          <button type="button" class="btn btn-light float-right" data-toggle="collapse" data-target="#basketCollapse">Basket (1)</button>
+          <button type="button" class="btn float-right btn-nav" data-toggle="collapse" data-target="#basketCollapse">Basket (1)</button>
         </div>
       </div>
     </div>
 
     <div class="container pl-0 pr-0">
       <div class="pt-3 pb-3 border-bottom container text-center">
-        <h3>
+        <h3 class="serif">
           COMPLETE MEALS
         </h3>
-        <p>
+        <p class="sansserif">
           Healthy meals for a full breakfast, luch or dinner. You won't feel hungry!
         </p>
       </div>
@@ -180,24 +180,24 @@
 
     <template id="plat_preview3">
       <div class="container mt-1 ml-1 mr-1 mb-1">
-        <div class="card" style="width:180px; height:300px">
-          <a href="Plat.html"><img id="card_img" class="img-fluid card-img-top" style="width:180px;height:200px;object-fit:cover;" src="assets\plats\canelons.png" alt="Plat"></a>
+        <div class="card card-catalog">
+          <a href="Plat.html"><img id="card_img" class="img-fluid card-img-top card-catalog-image"  src="assets\plats\canelons.png" alt="Plat"></a>
 
           <div class="card-body border-bottom pt-2 pb-2">
-                <h5 class="feature-title mb-0 mt-0" id="card_title">Lorem ipsum</h5>
+                <h5 class="feature-title mb-0 mt-0 serif" id="card_title">Lorem ipsum</h5>
           </div>
-          <div class="card-body pt-2 pb-2">
-            <div class="container">
+          <div class="card-body pt-2 pb-2 sansserif">
+            <div class="container-botons">
               <div class="row">
                 <div class="col-6 d-flex align-items-center">
                   <span id="card_price" class="float-left">0.0$</span>
                 </div>
                 <div class="col-6">
                   <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle btn-sm" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button class="btn btn-secondary dropdown-toggle btn-sm brand-color" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       BUY
                     </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <div class="dropdown-menu " aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#">Monday</a>
                       <a class="dropdown-item" href="#">Tuesday</a>
                       <a class="dropdown-item" href="#">Wednesday</a>
@@ -217,7 +217,7 @@
 
     <script>
       var myArr = ["canelons.png", "tagliattelle.png", "pizza.png", "toast.png"];
-      var myTitle = ["Canelonni", "Tagliatelle", "Pizza mia mamma", "Egg toast"];
+      var myTitle = ["Canelonni", "Tagliatelle", "Pizza mia", "Egg toast"];
       var prices = ["5.5€", "6.45€", "6.75€", "5.95€"];
       var imgFolder = 'assets/plats/';
     function showContent() {

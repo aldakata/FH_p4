@@ -7,18 +7,28 @@ body {
 /*color*/
 .brand-color {
   background:#A1E8A1;
+  color: black;
 }
 
 /*Buttons*/
 .btn-nav{
   border-color: #989898;
-  border-width: medium;
+  border-width: thin;
 }
 /*Typografie*/
 .serif{
   font-family: "Times New Roman", Times, serif;
 }
 .sansserif{
+  font-family: Helvetica, Arial, sans-serif;
+}
+h5{
+  font-family: "Times New Roman", Times, serif;
+}
+h1{
+  font-family: "Times New Roman", Times, serif;
+}
+p{
   font-family: Helvetica, Arial, sans-serif;
 }
 
