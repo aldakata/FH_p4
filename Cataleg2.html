@@ -16,7 +16,7 @@
 
   </head>
   <body onload="showContent()">
-    <div class="container fixed-top collapse" id="basketCollapse" style="background-color: rgba(255,255,255,1)">
+    <div class="container collapse" id="basketCollapse" style="background-color: rgba(255,255,255,1)">
       <div class="pt-3 pb-3 border-bottom container">
         <div class="row">
           <div class="col-6">
@@ -39,9 +39,27 @@
             <tr>
              <th scope="row">Monday</th>
              <td>
-               <ul class="list-group">
-                 <li class="list-group-item disabled">Empty</li>
-               </ul>
+               <div class="container">
+                 <div class="row">
+                   <div class="card" style="width:150px; height:190px">
+                     <img id="card_img" class="img-fluid card-img-top" style="width:150px;height:150px;object-fit:cover;" src="assets\plats\canelons.png" alt="Plat">
+
+                     <div class="card-body border-bottom pt-2 pb-2 pl-1 pr-1">
+                       <div class="container">
+                         <div class="row">
+                           <div class="col-6 d-flex align-items-center">
+                              <h5 class="feature-title mb-0 mt-0" id="card_title" style="font-size:14px">Canalons</h5>
+                           </div>
+                           <div class="col-6">
+                             <button type="button" class="btn btn-danger float-right pt-0 pb-0 pl-0 pr-0" style="width:20px;height:20px;font-size:10px">&#x2015;</button>
+                           </div>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+
+                 </div>
+               </div>
              </td>
             </tr>
 
@@ -129,20 +147,20 @@
             <div class="collapse navbar-collapse mx-auto" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                  <a class="nav-link  mx-auto" href="#">Home</a>
+                  <a class="nav-link  mx-auto" href="Home2.html">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link  mx-auto" href="#">Our Meals</a>
+                  <a class="nav-link  mx-auto" href="Cataleg2.html">Our Meals</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link  mx-auto" href="#">Weekly Diets</a>
+                  <a class="nav-link  mx-auto disabled" href="">Weekly Diets</a>
                 </li>
               </ul>
             </div>
           </nav>
         </div>
         <div class="col pr-4 pt-2 pb-3">
-          <button type="button" class="btn btn-light float-right" data-toggle="collapse" data-target="#basketCollapse">Basket (0)</button>
+          <button type="button" class="btn btn-light float-right" data-toggle="collapse" data-target="#basketCollapse">Basket (1)</button>
         </div>
       </div>
     </div>
