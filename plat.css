@@ -1,3 +1,4 @@
+
 /*--- Caroussel ---*/
 .imgCarousel {
   width: auto;
@@ -59,22 +60,54 @@
   color: #808080;
 }
 
+.plat_exp{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 20px;
+  margin-left: 20px;
+  text-align: inter-word;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
 h1{
   margin-top: 10px;
   margin-bottom: 10px;
   margin-right: 10px;
   margin-left: 10px;
   font-weight: 600;
+  font-family: "Times New Roman", Times, serif;
 }
-
+h5{
+  font-family: "Times New Roman", Times, serif;
+}
 p{
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-right: 10px;
-  margin-left: 15px;
-  text-align: inter-word;
+  font-family: Helvetica, Arial, sans-serif;
 }
-
 td{
   color: #808080;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: #f2f69;
+}
+
+/*color*/
+.brand-color {
+  background: PowderBlue;
+  color: black;
+}
+
+/*Buttons*/
+.btn-nav{
+  border-color: #989898;
+  border-width: thin;
+}
+/*Typografie*/
+.serif{
+  font-family: "Times New Roman", Times, serif;
+}
+.sansserif{
+  font-family: Helvetica, Arial, sans-serif;
 }

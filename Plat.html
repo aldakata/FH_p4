@@ -14,30 +14,35 @@
     <script src="utils/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <a class="navbar-brand" href="#">Edu Eats</a>
-
-      <button type="button" class="btn btn-default">Basket</button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Our Meals</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Weekly Diets</a>
-          </li>
-        </ul>
+    <div class="container mt-3 mb-3 brand-color">
+      <div class="row no-gutters">
+        <div class="col-8">
+          <nav class="navbar navbar-expand-md navbar-light">
+            <button class="navbar-toggler btn-nav" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand mx-auto serif" href="#">EduEats</a>
+            <div class="collapse navbar-collapse mx-auto" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a class="nav-link  mx-auto" href="Home2.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link  mx-auto" href="Cataleg2.html">Our Meals</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link  mx-auto disabled" href="">Weekly Diets</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <div class="col pr-4 pt-2 pb-3">
+          <button type="button" class="btn float-right btn-nav" data-toggle="collapse" data-target="#basketCollapse">Basket (1)</button>
+        </div>
       </div>
-    </nav>
+    </div>
+
     <div>
       <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
@@ -53,11 +58,11 @@
     <section>
       <h1>Tagliatelle</h1>
       <span>
-        <p class="subtitle"> Ración de 450 g<p>
+        <p class="subtitle"> Ración de 450g<p>
       </span>
     </section>
     <section>
-      <p>Empleamos la grasa del pato para el sofrito, al que agregamos ajos asados, setas y vino blanco. Agregamos hierbas, el confit desmigado y mojamos con caldo de ave. Para terminar añadimos pimientos del piquillo y crema de emmental y gorgonzola.<p>
+      <p class="plat_exp">Empleamos la grasa del pato para el sofrito, al que agregamos ajos asados, setas y vino blanco. Agregamos hierbas, el confit desmigado y mojamos con caldo de ave. Para terminar añadimos pimientos del piquillo y crema de emmental y gorgonzola.<p>
     </section>
     <section>
       <div id="accordion">
@@ -72,6 +77,9 @@
           <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
             <div class="card-body">
               <p> Caldo de pollo (agua, carcasa de pollo, alitas de pollo, zanahoria, cebolla, aceite de oliva, ajo pelado, laurel, sal), arroz carnarolli (41%), confit de pato (7%), setas en proporción variable: Seta de cardo, shitake, pholiota nameko, champiñón, vino blanco, oloroso, nata, pimientos del piquillo, sofrito de cebolla, grasa de pato, ajo tostado, queso emmental (con leche pasteurizada), queso gorgonzola (2%) (con leche pasteurizada), sal y romero. Lácteos.Este plato puede contener otros alérgenos ya que, por el momento, todos los platos se elaboran artesanalmente en el mismo obrador.
+              </p>
+              <p>
+                <b>Allergens:</b>Gluten
               </p>
             </div>
           </div>
@@ -168,8 +176,8 @@
 
     <div class="opct my-auto">
       <p class="left" align="left">6.45€</p>
-      <div class="dropdown right">
-        <button class="btn btn-secondary dropdown-toggle btn-sm float-right" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <div class="dropup right">
+        <button class="btn btn-secondary dropdown-toggle btn-sm float-right brand-color" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           BUY
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
