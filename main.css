@@ -3,7 +3,35 @@ body {
   margin: 0;
   background: #f2f69;
 }
+#mdiv {
+  width: 25px;
+  height: 25px;
+}
 
+.mdiv {
+  height: 25px;
+  width: 2px;
+  margin-left: 12px;
+  background-color: black;
+  transform: rotate(45deg);
+  Z-index: 1;
+}
+
+.md {
+  height: 25px;
+  width: 2px;
+  background-color: black;
+  transform: rotate(90deg);
+  Z-index: 2;
+}
+.center-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
 /*color*/
 .brand-color {
   background: PowderBlue;
