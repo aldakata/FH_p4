@@ -16,7 +16,7 @@
     <script src="utils/js/bootstrap.min.js"></script>
 
   </head>
-  <body onload="showContent()">
+  <body onload="show_content()">
     <div class="container collapse" id="basketCollapse">
       <div class="pt-3 pb-3 border-bottom container">
         <div class="row">
@@ -170,29 +170,64 @@
           <div class="row">
             <div class="col">
               <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <input type="checkbox" class="form-check-input" id="vegan_check" onchange="on_checkbox_change(this, 'Vegan', 'diet')">
                 <label class="form-check-label" for="exampleCheck1">Vegan</label>
               </div>
             </div>
             <div class="col">
               <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck2">
+                <input type="checkbox" class="form-check-input" id="med_check" onchange="on_checkbox_change(this, 'Mediterranean', 'diet')">
                 <label class="form-check-label" for="exampleCheck2">Mediterranean</label>
               </div>
             </div>
             <div class="col">
               <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <input type="checkbox" class="form-check-input" id="paleo_check" onchange="on_checkbox_change(this, 'Paleolithic', 'diet')">
                 <label class="form-check-label" for="exampleCheck1">Paleolithic</label>
               </div>
             </div>
           </div>
 
+          <div class="h5 row">
+            Macro-nutrients
+          </div>
           <div class="row">
             <div class="col">
               <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Vegetarian</label>
+                <input type="checkbox" class="form-check-input" id="highcarb_check" onchange="on_checkbox_change(this, 'High Carbs', 'macro')">
+                <label class="form-check-label" for="exampleCheck1">High Carbs</label>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="highprot_check" onchange="on_checkbox_change(this, 'High Protein', 'macro')">
+                <label class="form-check-label" for="exampleCheck1">High Protein</label>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="highfat_check" onchange="on_checkbox_change(this, 'High Fiber', 'macro')">
+                <label class="form-check-label" for="exampleCheck1">High Fiber</label>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="lowcarb_check" onchange="on_checkbox_change(this, 'Low Carbs', 'macro')">
+                <label class="form-check-label" for="exampleCheck1">Low Carbs</label>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="lowprot_check" onchange="on_checkbox_change(this, 'Low Protein', 'macro')">
+                <label class="form-check-label" for="exampleCheck1">Low Protein</label>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="lowfat_check" onchange="on_checkbox_change(this, 'Low Fat', 'macro')">
+                <label class="form-check-label" for="exampleCheck1">Low Fat</label>
               </div>
             </div>
           </div>
@@ -203,20 +238,20 @@
           <div class="row">
             <div class="col">
               <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Gluten</label>
+                <input type="checkbox" class="form-check-input" id="gluten_check" onchange="on_checkbox_change(this, 'Gluten Free', 'alergen')">
+                <label class="form-check-label" for="exampleCheck1">Gluten Free</label>
               </div>
             </div>
             <div class="col">
               <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Seafood</label>
+                <input type="checkbox" class="form-check-input" id="seaf_check" onchange="on_checkbox_change(this, 'Seafood Free', 'alergen')">
+                <label class="form-check-label" for="exampleCheck1">Seafood Free</label>
               </div>
             </div>
             <div class="col">
               <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Nuts</label>
+                <input type="checkbox" class="form-check-input" id="nut_check" onchange="on_checkbox_change(this, 'Nut Free', 'alergen')">
+                <label class="form-check-label" for="exampleCheck1">Nuts Free</label>
               </div>
             </div>
           </div>
@@ -299,31 +334,182 @@
     </template>
 
     <script>
-      var myArr = ["canelons.png", "tagliattelle.png", "pizza.png", "toast.png"];
-      var myTitle = ["Canelonni", "Tagliatelle", "Pizza", "Egg toast"];
-      var prices = ["5.5€", "6.45€", "6.75€", "5.95€"];
-      var imgFolder = 'assets/plats/';
-    function showContent() {
-      var item = document.getElementById("plat_preview3").content.querySelector("div");
-      for (i = 0; i<myArr.length; i++){
-        var newCard = document.importNode(item, true);
-        var img = newCard.querySelector("#card_img");
-        img.src=imgFolder.concat(myArr[i]);
-        img.alt=myTitle[i];
+      var imgFolder = "assets/plats/";
+      var catalog = [
+            {
+              id : 0,
+              name : "Tagliatelle",
+              diet_tags : ["Mediterranean"],
+              macro_tags: ["High Carbs", "Low Fat"],
+              alergen_tags: ["Seafood Free"],
+              thumbnail : "tagliattelle.png",
+              price : "6.45"
+            },
+            {
+              id : 1,
+              name : "Canelonni",
+              diet_tags : ["Mediterranean"],
+              macro_tags: ["High Carbs"],
+              alergen_tags: ["Seafood Free", "Nut Free"],
+              thumbnail : "canelons.png",
+              price : "6.65"
+            },
+            {
+              id : 2,
+              name : "Pizza",
+              diet_tags : ["Mediterranean"],
+              macro_tags: ["High Carbs", "High Protein"],
+              alergen_tags: ["Seafood Free", "Nut Free"],
+              thumbnail : "pizza.png",
+              price : "8.70"
+            },
+            {
+              id : 3,
+              name : "Egg toast",
+              diet_tags : [],
+              macro_tags: ["High Carbs", "High Protein"],
+              alergen_tags: ["Seafood Free", "Nut Free"],
+              thumbnail : "toast.png",
+              price : "4.5"
+            },
+            {
+              id : 4,
+              name : "Cucumber Salad",
+              diet_tags : ["Mediterranean", "Vegan"],
+              macro_tags: ["Low Carbs", "Low Protein", "High Fiber", "Low Fat"],
+              alergen_tags: ["Seafood Free", "Gluten Free"],
+              thumbnail : "tagliattelle.png",
+              price : "5.25"
+            },
+            {
+              id : 5,
+              name : "Steak Chimichurri",
+              diet_tags : ["Paleolithic"],
+              macro_tags: ["Low Carbs", "High Protein"],
+              alergen_tags: ["Seafood Free", "Gluten Free"],
+              thumbnail : "tagliattelle.png",
+              price : "19.99"
+            },
+            {
+              id : 6,
+              name : "Salmon",
+              diet_tags : ["Paleolithic", "Mediterranean"],
+              macro_tags: ["Low Carbs", "High Protein"],
+              alergen_tags: ["Gluten Free"],
+              thumbnail : "tagliattelle.png",
+              price : "12.99"
+            }
+          ];
 
-        var title = newCard.querySelector("#card_title");
-        title.textContent = myTitle[i];
+      var diet_filters = [];
+      var macro_filters = [];
+      var alergen_filters = [];
 
-        var price = newCard.querySelector("#card_price");
-        price.textContent = prices[i];
-
-        var row = document.createElement("div");
-        row.className="row";
-        row.appendChild(newCard)
-
-        document.getElementById("plat_container").appendChild(row);
+      function on_checkbox_change(checkbox, tag, filterType){
+        switch(filterType){
+          case 'diet':
+            if(checkbox.checked){
+              add_filter(diet_filters, tag);
+            }else{
+              remove_filter(diet_filters, tag);
+            }
+            break;
+          case 'macro':
+            if(checkbox.checked){
+              add_filter(macro_filters, tag);
+            }else{
+              remove_filter(macro_filters, tag);
+            }
+            break;
+          case 'alergen':
+            if(checkbox.checked){
+              add_filter(alergen_filters, tag);
+            }else{
+              remove_filter(alergen_filters, tag);
+            }
+            break;
+          default:
+            console.error("Invalid filter");
+        }
+        show_content();
       }
-    }
+
+      function add_filter(list, tag){
+        if(list.indexOf(tag)==-1){
+          list.push(tag);
+        }
+      }
+
+      function remove_filter(list, tag){
+        for(var i = 0; i < list.length; i++){
+          if(list[i] == tag){
+            list.splice(i, 1);
+          }
+        }
+      }
+
+      function show_content() {
+        var item = document.getElementById("plat_preview3").content.querySelector("div");
+        console.log(JSON.stringify(diet_filters));
+        fc = get_filtered_catalog();
+        plat_container = document.getElementById("plat_container");
+        while (plat_container.lastElementChild) {
+          plat_container.removeChild(plat_container.lastElementChild);
+        }
+        for (i = 0; i<fc.length; i++){
+          var newCard = document.importNode(item, true);
+          var img = newCard.querySelector("#card_img");
+          img.src=imgFolder.concat(fc[i].thumbnail);
+          img.alt=fc[i].name;
+
+          var title = newCard.querySelector("#card_title");
+          title.textContent = fc[i].name;
+
+          var price = newCard.querySelector("#card_price");
+          price.textContent = fc[i].price;
+
+          var row = document.createElement("div");
+          row.className="row";
+          row.appendChild(newCard)
+
+          plat_container.appendChild(row);
+        }
+      }
+
+      function get_filtered_catalog(){
+        return catalog.filter(function(meal){
+          return filter_pass(meal.diet_tags, meal.macro_tags, meal.alergen_tags)
+        });
+      }
+
+      function filter_pass(diet_tags, macro_tags, alergen_tags){
+        var diet_pass = true;
+        var macro_pass = true;
+        var alergen_pass = true;
+
+        for(var i = 0; i < diet_filters.length; i++){
+          if(diet_tags.indexOf(diet_filters[i])==-1){
+            diet_pass = false;
+            break;
+          }
+        }
+
+        for(var i = 0; i < macro_filters.length; i++){
+          if(macro_tags.indexOf(macro_filters[i])==-1){
+            macro_pass = false;
+            break;
+          }
+        }
+
+        for(var i = 0; i < alergen_filters.length; i++){
+          if(alergen_tags.indexOf(alergen_filters[i])==-1){
+            alergen_pass = false;
+            break;
+          }
+        }
+        return diet_pass && macro_pass && alergen_pass;
+      }
+
     </script>
   </body>
 </html>

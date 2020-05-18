@@ -1,0 +1,52 @@
+{
+    "catalog" : [
+      {
+        "id" : 0,
+        "name" : "Tagliatelle",
+        "diet_tags" : ["Mediterranean"],
+        "macro_tags": ["High Carbs"],
+        "thumbnail" : "tagliattelle.png",
+        "price" : "6.45"
+      },
+      {
+        "id" : 1,
+        "name" : "Canelonni",
+        "diet_tags" : ["Mediterranean"],
+        "macro_tags": ["High Carbs"],
+        "thumbnail" : "canelons.png",
+        "price" : "6.65"
+      },
+      {
+        "id" : 2,
+        "name" : "Pizza",
+        "diet_tags" : ["Mediterranean"],
+        "macro_tags": ["High Carbs", "High Protein"],
+        "thumbnail" : "pizza.png",
+        "price" : "8.70"
+      },
+      {
+        "id" : 3,
+        "name" : "Egg toast",
+        "diet_tags" : [],
+        "macro_tags": ["High Carbs", "High Protein"],
+        "thumbnail" : "toast.png",
+        "price" : "4.5"
+      },
+      {
+        "id" : 4,
+        "name" : "Cucumber Salad",
+        "diet_tags" : ["Mediterranean", "Vegan"],
+        "macro_tags": ["Low Carbs", "Low Protein", "High Fiber"],
+        "thumbnail" : "tagliattelle.png",
+        "price" : "5.25"
+      },
+      {
+        "id" : 5,
+        "name" : "Steak Chimichurri",
+        "diet_tags" : ["Paleolithic"],
+        "macro_tags": ["Low Carbs", "High Protein"],
+        "thumbnail" : "tagliattelle.png",
+        "price" : "19.99"
+      }
+    ]
+}
