@@ -375,28 +375,28 @@
 
       function remove_from_basket(meal_idx, day){
         console.log(""+meal_idx+" "+day);
-        var bc = getCookie('basket');
+        var bc = getStorage('basket');
         if(bc != ""){
           var basket_list = JSON.parse(bc);
           basket_list[day].splice(meal_idx, 1);
         }
         var basket_string = JSON.stringify(basket_list);
-        setCookie('basket', basket_string, 1);
+        setStorage('basket', basket_string);
         update_basket();
       }
 
       function add_to_basket(meal_id, day){
         console.log(""+meal_id+" "+day);
         var meal = getMeal(meal_id);
-        var bc = getCookie('basket');
-        if(bc == ""){
+        var bc = getStorage('basket');
+        if(bc == null){
           bc = [ [], [], [], [], [], [], [] ];
         }else{
           bc = JSON.parse(bc);
         }
         bc[day].push(meal);
         var basket_string = JSON.stringify(bc);
-        setCookie('basket', basket_string, 1);
+        setStorage('basket', basket_string);
         update_basket();
       }
 
@@ -405,10 +405,10 @@
       }
 
       function update_basket(){
-        var bc = getCookie('basket');
+        var bc = getStorage('basket');
         console.log("cookie: "+bc);
         var item = document.getElementById("basket_meal").content.querySelector("div");
-        if(bc != ""){
+        if(bc != null){
           var basket_list = JSON.parse(bc);
           console.log("basket_list" + typeof(basket_list));
           var basketday = ['basket_monday', 'basket_tuesday', 'basket_wednesday', 'basket_thursday', 'basket_friday', 'basket_saturday', 'basket_sunday'];
@@ -443,27 +443,14 @@
         }
       }
 
-      function setCookie(cname, cvalue, exdays) {
-        var d = new Date();
-        d.setTime(d.getTime() + (exdays*24*60*60*1000));
-        var expires = "expires="+ d.toUTCString();
-        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+      function setStorage(sname, svalue){
+        var storage = window.localStorage;
+        storage.setItem(sname, svalue);
       }
 
-      function getCookie(cname) {
-        var name = cname + "=";
-        var decodedCookie = decodeURIComponent(document.cookie);
-        var ca = decodedCookie.split(';');
-        for(var i = 0; i <ca.length; i++) {
-          var c = ca[i];
-          while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-          }
-          if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-          }
-        }
-        return "";
+      function getStorage(sname){
+        var storage = window.localStorage;
+        return storage.getItem(sname);
       }
 
       function on_load(){
